@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #ffb900;
+  --second-color: #171100;
+  --font-sen: "Sen", sans-serif;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -9,7 +15,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
-  /* font-family: "Sen", sans-serif; */
 }
 
 /* =========== Common ========== */
@@ -23,16 +28,19 @@ body {
 .btn {
   display: inline-block;
   min-width: 118px;
-  height: 50px;
-  padding: 16px;
+  line-height: 50px;
+  padding: 0 16px;
   font-weight: 600;
   font-size: 1.6rem;
   text-align: center;
   color: #ffffff;
-  background-color: #171100;
+  background-color: var(--second-color);
   border-radius: 24.5px;
 }
 
+.btn:hover {
+  opacity: 0.9;
+}
 a {
   text-decoration: none;
 }
@@ -45,6 +53,7 @@ a {
 .header.fixed {
   position: sticky;
   top: -28px;
+  z-index: 1;
 }
 
 .header .navigation {
@@ -70,7 +79,7 @@ a {
 .nav li.active a {
   /* font-weight: 600; */
   text-shadow: 1px 0 0 currentColor;
-  color: #171000;
+  color: var(--second-color);
 }
 
 .nav li.active a::after {
@@ -81,7 +90,7 @@ a {
   display: block;
   width: 12px;
   height: 2px;
-  background-color: #171100;
+  background-color: var(--second-color);
   border-radius: 1px;
 }
 
@@ -91,4 +100,164 @@ a {
 
 .action .sign-up-link {
   min-width: 144px;
+}
+
+/* ========== Hero ============ */
+.hero {
+  padding: 56px 0 65px;
+  background-color: #fffcf4;
+}
+
+.hero .hero-body {
+  display: flex;
+}
+
+/* Hero Left */
+.hero-body .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero-body .media-block .image {
+  display: block;
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-body .hero-sumary {
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  padding: 24px;
+  background-color: #fff;
+  width: 270px;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.hero-sumary .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-sumary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-body .item:first-child {
+  margin-top: 0;
+}
+
+.hero-body .info {
+  margin-left: 16px;
+}
+
+.hero-body .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff9e8;
+}
+
+.hero-body .item:nth-of-type(2) .icon {
+  background-color: #fcefff;
+}
+
+.hero-body .item:nth-of-type(3) .icon {
+  background-color: #ebeaff;
+}
+
+.hero-body .label {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.hero-body .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: var(--second-color);
+}
+
+/* Hero Right */
+.hero-body .content-block {
+  width: 52%;
+  padding: 64px 0 0 130px;
+}
+
+.hero-body .heading {
+  font-family: var(--font-sen);
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.06rem;
+  color: var(--second-color);
+}
+
+.hero-body .desc {
+  margin-top: 22px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.hero-body .cta-group {
+  display: flex;
+  align-items: center;
+  margin: 38px 0 48px;
+}
+
+.see-course {
+  min-width: 180px;
+  line-height: 64px;
+  border-radius: 32px;
+  background-color: var(--primary-color);
+}
+
+.hero-body .watch-video {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hero-body .watch-video .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.hero-body .watch-video span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: var(--second-color);
+}
+
+.hero-body .stats {
+  margin: 8px 0 0 -28px;
+}
+
+.hero-body .stats strong {
+  padding: 0 8px 0 28px;
+  font-family: var(--font-sen);
+  font-weight: 700;
+  font-size: 4.4rem;
+  color: var(--second-color);
 }
