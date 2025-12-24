@@ -51,7 +51,7 @@ a {
 .heading {
   font-family: var(--font-sen);
   font-weight: 700;
-  letter-spacing: -0.06rem;
+  letter-spacing: -0.02em;
   color: var(--second-color);
 }
 
@@ -298,7 +298,6 @@ a {
 .popular-top .heading.lv2 {
   font-size: 3.8rem;
   line-height: 1.26;
-  letter-spacing: -0.02px;
 }
 
 .popular-top .desc {
@@ -414,5 +413,204 @@ a {
 }
 
 .popular .courses-item .book-btn:hover {
+  opacity: 1;
   background-color: var(--primary-color);
+}
+
+/* =========== Feedback =========== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #2e2100;
+}
+
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback .feedback-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.feedback .info .avatar {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feedback .info .name {
+  margin-top: 18px;
+  font-family: var(--font-sen);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #f7f7f7;
+}
+
+.feedback .info .desc {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #bfbcb2;
+}
+
+.feedback .info .dotted {
+  display: flex;
+  margin-top: 28px;
+}
+
+.feedback .dotted .dot {
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+  cursor: pointer;
+}
+
+.feedback .dotted .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+.feedback .feedback-item .cont {
+  width: 66%;
+}
+
+.feedback .cont .quote {
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+  color: #ffffff;
+}
+
+/* =========== Features =========== */
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+
+/* Features 1 */
+.features .features-1 {
+  display: flex;
+}
+
+.features .feature-left {
+  position: relative;
+  display: flex;
+  width: 570px;
+  height: 438px;
+}
+
+.features .feature-left .image {
+  position: absolute;
+  width: 270px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.features .feature-left .image-1 {
+  left: 0;
+  bottom: 0;
+  height: 404px;
+}
+
+.features .feature-left .image-2 {
+  top: 0;
+  right: 0;
+  height: 405px;
+}
+
+.features .feature-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 41%;
+  margin-left: auto;
+}
+
+.features .feature-right .heading.lv2,
+.features .info .lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
+}
+
+.features .feature-right .desc,
+.features .info .desc {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: var(--third-color);
+}
+
+.features .feature-right .btn-sign-up,
+.features .info .btn-join {
+  margin-top: 32px;
+  min-width: 137px;
+  border-radius: 26px;
+  background-color: var(--primary-color);
+}
+
+/* Features 2 */
+.features-2 {
+  margin-top: 70px;
+}
+
+.features-2 .features-info {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-2 .features-info .info {
+  width: 49%;
+}
+
+.features-2 .features-info .img-feature {
+  width: 470px;
+  height: 440px;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ========== Blog ========== */
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #fffcf4;
+}
+
+/* Blog Head */
+.blog .blog-head {
+  text-align: center;
+}
+
+.blog .blog-head .lv2 {
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.26;
+  color: #130606;
+}
+
+.blog .blog-head .desc {
+  margin: 16px auto auto;
+  width: 448px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #696262;
 }
