@@ -9,6 +9,11 @@
   --font-sen: "Sen", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 62.5%;
 }
